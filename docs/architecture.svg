@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="700" viewBox="0 0 1280 700" role="img" aria-labelledby="title desc">
+  <title id="title">Historical Prompt C multimodal strategy</title>
+  <desc id="desc">The final recorded experiment used an authorized training pool to dynamically retrieve five examples. Description, ASR, and OCR were analyzed in a Prompt C text branch; video frames were analyzed in a separate visual branch. Structured branch outputs were combined using decision-level fusion and a 0.5 threshold before evaluation. This is a reconstructed conceptual diagram, not the standalone demo pipeline.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#526579"/></marker>
+    <style>
+      .bg{fill:#f6f8fb}.data{fill:#eaf2fb;stroke:#4f78a8;stroke-width:2;rx:16}.pool{fill:#f2edfa;stroke:#7863a8;stroke-width:2;rx:16}.text{fill:#e9f4fb;stroke:#4384a8;stroke-width:2;rx:16}.visual{fill:#eaf6ef;stroke:#39856a;stroke-width:2;rx:16}.fusion{fill:#fff1df;stroke:#bd8131;stroke-width:2;rx:16}.result{fill:#f9eaea;stroke:#b45a58;stroke-width:2;rx:16}.note{fill:#fff;stroke:#cbd6e2;stroke-width:2;rx:16}.title{font:700 27px system-ui,sans-serif;fill:#17324d}.sub{font:15px system-ui,sans-serif;fill:#526579}.head{font:700 18px system-ui,sans-serif;fill:#17324d}.body{font:14px system-ui,sans-serif;fill:#334b61}.small{font:12px system-ui,sans-serif;fill:#526579}.arrow{stroke:#526579;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1280" height="700" rx="24"/>
+  <text class="title" x="42" y="48">Final recorded strategy: Prompt C + dynamic five-shot</text>
+  <text class="sub" x="42" y="76">Reconstructed from team artifacts and Git history · not a claim that this strategy was globally optimal</text>
+
+  <path class="arrow" d="M280 195 H310 V88 H625 V195 H665"/>
+  <path class="arrow" d="M280 285 H300 V260 H620 V440 H665"/>
+  <path class="arrow" d="M280 530 H320 V390 H365"/>
+  <path class="arrow" d="M475 220 V280"/>
+  <path class="arrow" d="M585 320 H625 V195 H665"/>
+  <path class="arrow" d="M585 385 H665"/>
+  <path class="arrow" d="M935 195 C965 195 970 270 1000 270"/>
+  <path class="arrow" d="M935 445 C970 445 970 350 1000 350"/>
+  <path class="arrow" d="M1110 390 V445"/>
+
+  <rect class="data" x="40" y="145" width="240" height="180"/>
+  <text class="head" x="62" y="180">Authorized split data</text>
+  <text class="body" x="62" y="213">Description · ASR · OCR</text>
+  <text class="body" x="62" y="241">Selected video frames</text>
+  <text class="body" x="62" y="277">Train / validation / test</text>
+  <text class="small" x="62" y="307">Original files excluded here</text>
+
+  <rect class="pool" x="365" y="95" width="220" height="125"/>
+  <text class="head" x="385" y="131">Training pool</text>
+  <text class="body" x="385" y="161">Labeled examples only</text>
+  <text class="body" x="385" y="186">Source for retrieval</text>
+  <text class="small" x="385" y="210">No test examples retrieved</text>
+
+  <rect class="pool" x="365" y="280" width="220" height="140"/>
+  <text class="head" x="385" y="317">Dynamic retrieval</text>
+  <text class="body" x="385" y="348">Select 5 relevant</text>
+  <text class="body" x="385" y="374">training examples</text>
+  <text class="small" x="385" y="404">Supply both branches</text>
+
+  <rect class="pool" x="40" y="475" width="240" height="115"/>
+  <text class="head" x="62" y="511">Training examples</text>
+  <text class="body" x="62" y="541">Labeled cases form pool</text>
+  <text class="small" x="62" y="570">Data not part of this release</text>
+
+  <rect class="text" x="665" y="110" width="270" height="170"/>
+  <text class="head" x="689" y="147">Prompt C · text</text>
+  <text class="body" x="689" y="180">Description + ASR + OCR</text>
+  <text class="body" x="689" y="206">Reason over claim/context</text>
+  <text class="body" x="689" y="232">Structured label + confidence</text>
+  <text class="small" x="689" y="260">5 retrieved examples included</text>
+
+  <rect class="visual" x="665" y="360" width="270" height="170"/>
+  <text class="head" x="689" y="397">Prompt C · visual</text>
+  <text class="body" x="689" y="430">Inspect selected keyframes</text>
+  <text class="body" x="689" y="456">Assess visual support</text>
+  <text class="body" x="689" y="482">Structured label + confidence</text>
+  <text class="small" x="689" y="510">5 retrieved examples included</text>
+
+  <rect class="fusion" x="1000" y="230" width="230" height="160"/>
+  <text class="head" x="1022" y="267">Decision fusion</text>
+  <text class="body" x="1022" y="299">Combine branch scores</text>
+  <text class="body" x="1022" y="325">Apply threshold 0.5</text>
+  <text class="small" x="1022" y="362">Final fake / real label</text>
+
+  <rect class="result" x="1000" y="445" width="230" height="125"/>
+  <text class="head" x="1022" y="481">Recorded test result</text>
+  <text class="body" x="1022" y="512">18 / 24 fake found</text>
+  <text class="body" x="1022" y="539">75% fake recall</text>
+  <text class="small" x="1022" y="560">74 examples total</text>
+
+  <rect class="note" x="365" y="485" width="570" height="105"/>
+  <text class="head" x="389" y="520">Separate standalone implementation</text>
+  <text class="body" x="389" y="549">Accepts prepared text and optional frames; its synthetic</text>
+  <text class="body" x="389" y="572">demo uses fixtures and makes no model API calls.</text>
+  <text class="small" x="389" y="588">It does not perform OCR/ASR or extract keyframes.</text>
+
+  <text class="small" x="1000" y="615">System 1 test-protocol caveat in README.</text>
+</svg>

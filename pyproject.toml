@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools==77.0.3", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fakett-research"
+version = "0.1.0"
+description = "Data-free research tooling for text baselines and multimodal misinformation experiments"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+  "requests==2.32.3",
+  "scikit-learn==1.6.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5"]
+
+[project.scripts]
+fakett-demo = "fakett_research.demo:main"
+fakett-baseline = "fakett_research.baseline:main"
+fakett-llm = "fakett_research.mllm:main"
+fakett-audit = "fakett_research.audit:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+fakett_research = ["prompts/v1/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

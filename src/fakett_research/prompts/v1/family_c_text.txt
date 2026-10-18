@@ -1,0 +1,9 @@
+Analyze only the text evidence for this sample. Summarize the claim and text evidence, identify uncertainty, and return a tentative dataset label. Do not use outside knowledge. The label is a research annotation, not a fact-check verdict.
+
+Text evidence:
+{{EVIDENCE}}
+
+Training examples (if any):
+{{EXAMPLES}}
+
+Return only JSON with fields label (fake or real), confidence (0 to 1), rationale (short), and text_evidence_strength (weak, medium, or strong).

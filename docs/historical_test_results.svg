@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="830" viewBox="0 0 1260 830" role="img" aria-labelledby="title desc">
+  <title id="title">Historical FakeTT test comparison</title>
+  <desc id="desc">On a 74-example test split with 24 fake and 50 real examples, Baseline A has accuracy 70.27 percent, macro F1 67.93, fake precision 53.33, fake recall 66.67, real precision 81.82, and real recall 72 percent. Baseline B has 75.68, 72.82, 61.54, 66.67, 83.33, and 80 percent. Final MLLM has 71.62, 70.04, 54.55, 75, 85.37, and 70 percent. MLLM finds two more fake examples than either baseline, but has five more false positives than Baseline B.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f6f8fb}.title{font:700 28px system-ui,sans-serif;fill:#17324d}.subtitle{font:15px system-ui,sans-serif;fill:#526579}.metric{font:700 16px system-ui,sans-serif;fill:#17324d}.label{font:14px system-ui,sans-serif;fill:#334b61}.value{font:700 14px system-ui,sans-serif;fill:#17324d}.tick{font:12px system-ui,sans-serif;fill:#708195}.grid{stroke:#dce4ed;stroke-width:1}.a{fill:#4f78a8}.b{fill:#bd8c36}.m{fill:#39856a}.card{fill:#fff;stroke:#d7e0e9;stroke-width:1.5;rx:15}.call{font:700 17px system-ui,sans-serif;fill:#17324d}.callbody{font:14px system-ui,sans-serif;fill:#334b61}.note{font:13px system-ui,sans-serif;fill:#526579}
+    </style>
+  </defs>
+  <rect class="bg" width="1260" height="830" rx="24"/>
+  <text class="title" x="42" y="48">Two more fake videos found out of 24</text>
+  <text class="subtitle" x="42" y="77">Historical test artifacts · 74 examples total · 0–100% scale · descriptive results from one small split</text>
+  <rect class="a" x="43" y="101" width="15" height="15" rx="3"/><text class="label" x="66" y="114">Baseline A · text</text>
+  <rect class="b" x="222" y="101" width="15" height="15" rx="3"/><text class="label" x="245" y="114">Baseline B · metadata</text>
+  <rect class="m" x="443" y="101" width="15" height="15" rx="3"/><text class="label" x="466" y="114">Final MLLM · Prompt C</text>
+  <g>
+    <line class="grid" x1="380" y1="137" x2="380" y2="685"/><line class="grid" x1="510" y1="137" x2="510" y2="685"/><line class="grid" x1="640" y1="137" x2="640" y2="685"/><line class="grid" x1="770" y1="137" x2="770" y2="685"/><line class="grid" x1="900" y1="137" x2="900" y2="685"/>
+    <text class="tick" x="376" y="132">0</text><text class="tick" x="502" y="132">25</text><text class="tick" x="632" y="132">50</text><text class="tick" x="762" y="132">75</text><text class="tick" x="888" y="132">100%</text>
+  </g>
+  <g>
+    <text class="metric" x="42" y="190">Test accuracy</text>
+    <text class="label" x="230" y="165">A</text><rect class="a" x="380" y="151" width="365.4" height="18" rx="5"/><text class="value" x="754" y="165">70.27%</text>
+    <text class="label" x="230" y="190">B</text><rect class="b" x="380" y="176" width="393.5" height="18" rx="5"/><text class="value" x="782" y="190">75.68%</text>
+    <text class="label" x="230" y="215">MLLM</text><rect class="m" x="380" y="201" width="372.4" height="18" rx="5"/><text class="value" x="761" y="215">71.62%</text>
+  </g>
+  <g>
+    <text class="metric" x="42" y="278">Macro-F1</text>
+    <text class="label" x="230" y="253">A</text><rect class="a" x="380" y="239" width="353.2" height="18" rx="5"/><text class="value" x="742" y="253">67.93%</text>
+    <text class="label" x="230" y="278">B</text><rect class="b" x="380" y="264" width="378.7" height="18" rx="5"/><text class="value" x="768" y="278">72.82%</text>
+    <text class="label" x="230" y="303">MLLM</text><rect class="m" x="380" y="289" width="364.2" height="18" rx="5"/><text class="value" x="753" y="303">70.04%</text>
+  </g>
+  <g>
+    <text class="metric" x="42" y="366">Fake precision</text>
+    <text class="label" x="230" y="341">A</text><rect class="a" x="380" y="327" width="277.3" height="18" rx="5"/><text class="value" x="666" y="341">53.33%</text>
+    <text class="label" x="230" y="366">B</text><rect class="b" x="380" y="352" width="320" height="18" rx="5"/><text class="value" x="709" y="366">61.54%</text>
+    <text class="label" x="230" y="391">MLLM</text><rect class="m" x="380" y="377" width="283.6" height="18" rx="5"/><text class="value" x="673" y="391">54.55%</text>
+  </g>
+  <g>
+    <text class="metric" x="42" y="454">Fake recall</text>
+    <text class="label" x="230" y="429">A</text><rect class="a" x="380" y="415" width="346.7" height="18" rx="5"/><text class="value" x="736" y="429">66.67%</text>
+    <text class="label" x="230" y="454">B</text><rect class="b" x="380" y="440" width="346.7" height="18" rx="5"/><text class="value" x="736" y="454">66.67%</text>
+    <text class="label" x="230" y="479">MLLM</text><rect class="m" x="380" y="465" width="390" height="18" rx="5"/><text class="value" x="779" y="479">75.00%</text>
+  </g>
+  <g>
+    <text class="metric" x="42" y="542">Real precision</text>
+    <text class="label" x="230" y="517">A</text><rect class="a" x="380" y="503" width="425.5" height="18" rx="5"/><text class="value" x="814" y="517">81.82%</text>
+    <text class="label" x="230" y="542">B</text><rect class="b" x="380" y="528" width="433.3" height="18" rx="5"/><text class="value" x="822" y="542">83.33%</text>
+    <text class="label" x="230" y="567">MLLM</text><rect class="m" x="380" y="553" width="444" height="18" rx="5"/><text class="value" x="833" y="567">85.37%</text>
+  </g>
+  <g>
+    <text class="metric" x="42" y="630">Real recall</text>
+    <text class="label" x="230" y="605">A</text><rect class="a" x="380" y="591" width="374.4" height="18" rx="5"/><text class="value" x="763" y="605">72.00%</text>
+    <text class="label" x="230" y="630">B</text><rect class="b" x="380" y="616" width="416" height="18" rx="5"/><text class="value" x="805" y="630">80.00%</text>
+    <text class="label" x="230" y="655">MLLM</text><rect class="m" x="380" y="641" width="364" height="18" rx="5"/><text class="value" x="753" y="655">70.00%</text>
+  </g>
+  <rect class="card" x="944" y="163" width="278" height="390"/>
+  <text class="call" x="970" y="202">Fake-recall result</text>
+  <text class="callbody" x="970" y="232">MLLM: 18 / 24 fake videos</text>
+  <text class="callbody" x="970" y="255">Baselines: 16 / 24 each</text>
+  <text class="call" x="970" y="301">+8.33 percentage points</text>
+  <line x1="970" y1="324" x2="1197" y2="324" stroke="#e1e7ee"/>
+  <text class="call" x="970" y="357">Precision trade-off</text>
+  <text class="callbody" x="970" y="387">Fake precision 54.55% vs B's 61.54%</text>
+  <text class="callbody" x="970" y="410">15 false positives vs B's 10</text>
+  <text class="callbody" x="970" y="447">Real recall: 70% vs B's 80%</text>
+  <text class="note" x="970" y="480">More positive predictions found</text>
+  <text class="note" x="970" y="500">more fake cases and more false alarms.</text>
+  <text class="note" x="970" y="530">No generalization claim.</text>
+  <text class="note" x="42" y="755">Source: committed System 1 test_metrics.json files and System 2 final run 935684e530.json. Fake is the positive class.</text>
+  <text class="note" x="42" y="780">System 1 records test results for eight variants; whether those scores influenced selection is unknown. See README caveat.</text>
+</svg>

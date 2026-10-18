@@ -1,0 +1,9 @@
+Analyze only the supplied images for visible scene evidence. Do not infer truth from an image alone. If an image is missing, ambiguous, or contains only repeated overlay text, lower confidence. Do not use outside knowledge.
+
+Available post text for context (not visual proof):
+{{EVIDENCE}}
+
+Training examples (if any):
+{{EXAMPLES}}
+
+Return only JSON with fields label (fake or real), confidence (0 to 1), rationale (short), visual_evidence_strength (weak, medium, or strong), and visual_evidence_type (scene_content, text_overlay_only, mixed, or unclear).

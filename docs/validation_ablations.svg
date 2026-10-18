@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="720" viewBox="0 0 1160 720" role="img" aria-labelledby="title desc">
+  <title id="title">Exploratory FakeTT validation ablations</title>
+  <desc id="desc">Macro-F1 on the 29-example validation set: prompt A 0.7909, B 0.7539, C 0.8535; Prompt C visual 0.8535 versus no visual 0.6758; dynamic one, three, and five shot 0.8134, 0.8043, and 0.8880; fixed one, three, five shot 0.8242, 0.7238, and 0.7575; self-consistency one, three, five calls 0.8535, 0.8535, and 0.8199. These are repeated exploratory results, not proof of generalization.</desc>
+  <defs><style>
+    .bg{fill:#f6f8fb}.title{font:700 27px system-ui,sans-serif;fill:#17324d}.sub{font:14px system-ui,sans-serif;fill:#526579}.group{font:700 15px system-ui,sans-serif;fill:#17324d}.lab{font:13px system-ui,sans-serif;fill:#334b61}.val{font:700 13px system-ui,sans-serif;fill:#17324d}.tick{font:11px system-ui,sans-serif;fill:#708195}.grid{stroke:#dce4ed;stroke-width:1}.blue{fill:#4f78a8}.gold{fill:#bd8c36}.green{fill:#39856a}.light{fill:#9aa8b7}.purple{fill:#7863a8}.note{font:13px system-ui,sans-serif;fill:#526579}
+  </style></defs>
+  <rect class="bg" width="1160" height="720" rx="24"/>
+  <text class="title" x="42" y="48">What changed the validation score—and what did not?</text>
+  <text class="sub" x="42" y="76">Macro-F1 on 29 examples · recorded exploratory runs · common 0–1 scale</text>
+  <g>
+    <line class="grid" x1="390" y1="124" x2="390" y2="622"/><line class="grid" x1="502.5" y1="124" x2="502.5" y2="622"/><line class="grid" x1="615" y1="124" x2="615" y2="622"/><line class="grid" x1="727.5" y1="124" x2="727.5" y2="622"/><line class="grid" x1="840" y1="124" x2="840" y2="622"/>
+    <text class="tick" x="386" y="116">0</text><text class="tick" x="493" y="116">0.25</text><text class="tick" x="607" y="116">0.50</text><text class="tick" x="719" y="116">0.75</text><text class="tick" x="831" y="116">1.00</text>
+  </g>
+  <g>
+    <text class="group" x="42" y="174">Prompt family</text>
+    <text class="lab" x="250" y="148">A</text><rect class="blue" x="390" y="136" width="355.9" height="16" rx="4"/><text class="val" x="755" y="149">0.7909</text>
+    <text class="lab" x="250" y="171">B</text><rect class="gold" x="390" y="159" width="339.3" height="16" rx="4"/><text class="val" x="739" y="172">0.7539</text>
+    <text class="lab" x="250" y="194">C</text><rect class="green" x="390" y="182" width="384.1" height="16" rx="4"/><text class="val" x="784" y="195">0.8535</text>
+  </g>
+  <g>
+    <text class="group" x="42" y="269">Visual evidence</text>
+    <text class="lab" x="250" y="243">With visual</text><rect class="green" x="390" y="231" width="384.1" height="16" rx="4"/><text class="val" x="784" y="244">0.8535</text>
+    <text class="lab" x="250" y="266">No visual</text><rect class="light" x="390" y="254" width="304.1" height="16" rx="4"/><text class="val" x="704" y="267">0.6758</text>
+  </g>
+  <g>
+    <text class="group" x="42" y="364">Dynamic retrieval</text>
+    <text class="lab" x="250" y="338">1 example</text><rect class="green" x="390" y="326" width="366.0" height="16" rx="4"/><text class="val" x="766" y="339">0.8134</text>
+    <text class="lab" x="250" y="361">3 examples</text><rect class="green" x="390" y="349" width="361.9" height="16" rx="4"/><text class="val" x="762" y="362">0.8043</text>
+    <text class="lab" x="250" y="384">5 examples</text><rect class="green" x="390" y="372" width="399.6" height="16" rx="4"/><text class="val" x="800" y="385">0.8880</text>
+  </g>
+  <g>
+    <text class="group" x="42" y="459">Fixed example bank</text>
+    <text class="lab" x="250" y="433">1 example</text><rect class="blue" x="390" y="421" width="370.9" height="16" rx="4"/><text class="val" x="771" y="434">0.8242</text>
+    <text class="lab" x="250" y="456">3 examples</text><rect class="blue" x="390" y="444" width="325.7" height="16" rx="4"/><text class="val" x="726" y="457">0.7238</text>
+    <text class="lab" x="250" y="479">5 examples</text><rect class="blue" x="390" y="467" width="340.9" height="16" rx="4"/><text class="val" x="741" y="480">0.7575</text>
+  </g>
+  <g>
+    <text class="group" x="42" y="554">Self-consistency</text>
+    <text class="lab" x="250" y="528">1 call</text><rect class="purple" x="390" y="516" width="384.1" height="16" rx="4"/><text class="val" x="784" y="529">0.8535</text>
+    <text class="lab" x="250" y="551">3 calls</text><rect class="purple" x="390" y="539" width="384.1" height="16" rx="4"/><text class="val" x="784" y="552">0.8535</text>
+    <text class="lab" x="250" y="574">5 calls</text><rect class="purple" x="390" y="562" width="368.9" height="16" rx="4"/><text class="val" x="769" y="575">0.8199</text>
+  </g>
+  <text class="note" x="42" y="646">Dynamic five-shot led its recorded series; fixed-bank growth and extra self-consistency calls did not improve it consistently.</text>
+  <text class="note" x="42" y="670">Repeated iteration on the same small validation split makes these comparisons exploratory, not evidence of a globally optimal strategy.</text>
+</svg>

@@ -1,0 +1,86 @@
+{
+  "source": "DAT560_Project_Report.pdf and matching aggregate artifacts from the private academic repository; no sample-level outputs are reproduced here.",
+  "test_split_size": 74,
+  "positive_label": "fake",
+  "fake_class_test_comparison": {
+    "test_support": {"fake": 24, "real": 50},
+    "source_artifacts": {
+      "baseline_a": "system1/outputs/system1_runner/baseline_a/test_metrics.json",
+      "baseline_b": "system1/outputs/system1_runner/baseline_b/test_metrics.json",
+      "final_mllm": "system2/results/experiments/final/935684e530.json"
+    },
+    "derived_metric_note": "System 1 class metrics are read directly from each per_class object. The System 2 final artifact stores binary fake precision/recall and a confusion matrix; real precision and recall are derived from the matrix as 35/(35+6)=85.37% and 35/50=70.00%.",
+    "baseline_a": {
+      "accuracy": 0.7027027027,
+      "macro_f1": 0.6792750197,
+      "fake_precision": 0.5333333333,
+      "fake_recall": 0.6666666667,
+      "real_precision": 0.8181818182,
+      "real_recall": 0.72,
+      "fake_true_positives": 16,
+      "fake_false_positives": 14,
+      "fake_false_negatives": 8
+    },
+    "baseline_b": {
+      "accuracy": 0.7567567568,
+      "macro_f1": 0.7281632653,
+      "fake_precision": 0.6153846154,
+      "fake_recall": 0.6666666667,
+      "real_precision": 0.8333333333,
+      "real_recall": 0.8,
+      "fake_true_positives": 16,
+      "fake_false_positives": 10,
+      "fake_false_negatives": 8
+    },
+    "final_mllm": {
+      "accuracy": 0.7162162162,
+      "macro_f1": 0.7004048583,
+      "fake_precision": 0.5454545455,
+      "fake_recall": 0.75,
+      "real_precision": 0.8536585366,
+      "real_recall": 0.7,
+      "fake_true_positives": 18,
+      "fake_false_positives": 15,
+      "fake_false_negatives": 6,
+      "configuration": "Prompt C, dynamic 5-shot, visual evidence, gorina10.gemma4:31b, threshold 0.5"
+    },
+    "deltas_percentage_points": {
+      "fake_recall_final_vs_baseline_a": 8.33333333,
+      "fake_recall_final_vs_baseline_b": 8.33333333,
+      "fake_precision_final_vs_baseline_a": 1.21212121,
+      "fake_precision_final_vs_baseline_b": -6.99300700
+    },
+    "interpretation": "The MLLM identified two more fake examples than either text baseline on this split, while producing five more false positives than Baseline B. This is a descriptive result from 24 fake examples, not a statistically established generalization improvement."
+  },
+  "headline_test_results": [
+    {"name": "System 1 text baseline A (description + ASR + OCR)", "accuracy": 0.7027, "macro_f1": 0.6793, "source_artifact": "system1/outputs/system1_runner/overall_summary.json: baseline_a"},
+    {"name": "System 1 metadata baseline B (adds user_description + event)", "accuracy": 0.7568, "macro_f1": 0.7282, "source_artifact": "system1/outputs/system1_runner/overall_summary.json: baseline_b"},
+    {"name": "System 1 baseline A + event", "accuracy": 0.7568, "macro_f1": 0.7332, "source_artifact": "system1/outputs/system1_runner/overall_summary.json: baseline_a_plus_event"},
+    {"name": "System 2 prompt C, dynamic 5-shot, visual, recorded Gemma 4 31B", "accuracy": 0.7162, "macro_f1": 0.7004, "source_artifact": "system2/results/experiments/final/935684e530.json"}
+  ],
+  "validation_observations": {
+    "prompt_family_macro_f1_zero_shot": {"A": 0.7909, "B": 0.7539, "C": 0.8535},
+    "prompt_c_visual_macro_f1": 0.8535,
+    "prompt_c_no_visual_macro_f1": 0.6758,
+    "dynamic_few_shot_macro_f1": {"1_shot": 0.8134, "3_shot": 0.8043, "5_shot": 0.8880},
+    "fixed_few_shot_macro_f1": {"1_shot": 0.8242, "3_shot": 0.7238, "5_shot": 0.7575},
+    "prompt_c_self_consistency_macro_f1": {"1_call": 0.8535, "3_calls": 0.8535, "5_calls": 0.8199},
+    "clean_ocr_prompt_c_validation_macro_f1": 0.8919
+  },
+  "protocol_audit": {
+    "system1_test_variants_in_stored_overall_summary": 8,
+    "system2_validation_run_summaries": 21,
+    "system2_test_run_summaries": 1,
+    "report_claim": "The report describes the test set as locked and used once for selected systems.",
+    "artifact_observation": "The System 1 aggregate runner summary records test metrics for all eight variants in one run group. The runner source computes test probabilities, predictions, and metrics inside each variant call, then writes the test artifacts. Git history records a System 2 best-validation artifact before the final test artifact, but cannot rule out unrecorded runs or other selection decisions.",
+    "what_cannot_be_inferred": "The committed artifacts do not reveal whether System 1 test scores informed selection, nor can the System 2 commit order prove that no unrecorded test-informed iteration occurred.",
+    "release_interpretation": "State that System 1 test results were computed for eight variants and that the role those results played in selection is unknown. Do not certify a pristine, untouched, single-use test protocol without additional contemporaneous evidence."
+  },
+  "limitations": [
+    "Only 29 validation and 74 test samples were in the matched local subset.",
+    "The MLLM beat text baseline A on test macro-F1 but did not beat metadata baseline B or baseline A plus event.",
+    "Metadata and event may act as shortcut features and are not a controlled content-only comparison.",
+    "The historical comparison is not perfectly controlled across every stored variant and repeated validation iteration.",
+    "Validation maxima after many prompt/configuration trials do not demonstrate generalization."
+  ]
+}

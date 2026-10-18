@@ -1,0 +1,21 @@
+sample_id,split,label,description,ocr,asr,image_paths
+TR-F01,train,fake,"SYNTHETIC EXERCISE: an imaginary alert makes an unsupported claim about a violet moon.","UNVERIFIED FICTIONAL ALERT","Synthetic sample narration one.",images/fake-symbol.png
+TR-F02,train,fake,"SYNTHETIC EXERCISE: a made-up rumor claims a paper bridge can float without support.","NO SOURCE IN THIS FICTIONAL EXAMPLE","Synthetic sample narration two.",images/fake-symbol.png
+TR-F03,train,fake,"SYNTHETIC EXERCISE: an invented post says a glass seed grows instantly in darkness.","IMAGINARY CLAIM","Synthetic sample narration three.",images/fake-symbol.png
+TR-F04,train,fake,"SYNTHETIC EXERCISE: fictional text claims a copper cloud stores yesterday's rain.","UNVERIFIED FICTIONAL ALERT","Synthetic sample narration four.",images/fake-symbol.png
+TR-F05,train,fake,"SYNTHETIC EXERCISE: a fictional rumor says a silent bell can ring under water.","NO SOURCE IN THIS FICTIONAL EXAMPLE","Synthetic sample narration five.",images/fake-symbol.png
+TR-F06,train,fake,"SYNTHETIC EXERCISE: an imaginary post claims a stone leaf changes color by thought.","IMAGINARY CLAIM","Synthetic sample narration six.",images/fake-symbol.png
+TR-R01,train,real,"SYNTHETIC EXERCISE: a fictional catalog lists a blue cube with three painted faces.","FICTIONAL CATALOG ENTRY","Synthetic sample narration seven.",images/real-symbol.png
+TR-R02,train,real,"SYNTHETIC EXERCISE: an imaginary handbook describes a paper bridge model on a table.","FICTIONAL HANDBOOK","Synthetic sample narration eight.",images/real-symbol.png
+TR-R03,train,real,"SYNTHETIC EXERCISE: a made-up archive records a glass seed as a classroom prop.","FICTIONAL ARCHIVE RECORD","Synthetic sample narration nine.",images/real-symbol.png
+TR-R04,train,real,"SYNTHETIC EXERCISE: a fictional museum card describes a copper cloud sculpture.","FICTIONAL CATALOG ENTRY","Synthetic sample narration ten.",images/real-symbol.png
+TR-R05,train,real,"SYNTHETIC EXERCISE: an imaginary guide identifies a silent bell as a ceramic model.","FICTIONAL HANDBOOK","Synthetic sample narration eleven.",images/real-symbol.png
+TR-R06,train,real,"SYNTHETIC EXERCISE: a made-up catalog describes a stone leaf as a painted ornament.","FICTIONAL ARCHIVE RECORD","Synthetic sample narration twelve.",images/real-symbol.png
+VA-F01,val,fake,"SYNTHETIC EXERCISE: an imaginary notice claims a silver seed sings before sunrise.","UNVERIFIED FICTIONAL ALERT","Synthetic validation narration one.",images/fake-symbol.png
+VA-F02,val,fake,"SYNTHETIC EXERCISE: a made-up rumor says a paper bridge crosses the sky by itself.","IMAGINARY CLAIM","Synthetic validation narration two.",images/fake-symbol.png
+VA-R01,val,real,"SYNTHETIC EXERCISE: a fictional catalog describes a silver seed as a model ornament.","FICTIONAL CATALOG ENTRY","Synthetic validation narration three.",images/real-symbol.png
+VA-R02,val,real,"SYNTHETIC EXERCISE: an imaginary handbook records a paper bridge as a desk model.","FICTIONAL HANDBOOK","Synthetic validation narration four.",images/real-symbol.png
+TE-F01,test,fake,"SYNTHETIC EXERCISE: a fictional alert claims a glass kite glows beneath the floor.","UNVERIFIED FICTIONAL ALERT","Synthetic test narration one.",images/fake-symbol.png
+TE-F02,test,fake,"SYNTHETIC EXERCISE: an invented rumor claims a blue cube predicts tomorrow's weather.","IMAGINARY CLAIM","Synthetic test narration two.",images/fake-symbol.png
+TE-R01,test,real,"SYNTHETIC EXERCISE: a fictional catalog describes a glass kite as a classroom model.","FICTIONAL CATALOG ENTRY","Synthetic test narration three.",images/real-symbol.png
+TE-R02,test,real,"SYNTHETIC EXERCISE: an imaginary archive lists a blue cube as a painted toy.","FICTIONAL ARCHIVE RECORD","Synthetic test narration four.",images/real-symbol.png

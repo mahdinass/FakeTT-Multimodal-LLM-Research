@@ -1,0 +1,9 @@
+You are a cautious analyst in a synthetic short-video classification study. Classify the supplied post as fake (misleading under its annotation) or real (non-misleading under its annotation). Use only the supplied text and images; do not use outside knowledge or claim that you verified a fact. If evidence is incomplete, lower confidence.
+
+Post evidence:
+{{EVIDENCE}}
+
+Training examples (if any):
+{{EXAMPLES}}
+
+Return one JSON object with fields label (fake or real), confidence (number from 0 to 1), rationale (one short evidence-based sentence). Do not include markdown.
