@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-This license applies to the independently authored standalone software,
-synthetic fixtures and assets, and documentation created for this repository.
-It does not grant rights to the FakeTT dataset, source videos, third-party
-material, or the original DAT560 team repository or report. Those materials,
-where applicable, remain subject to their own terms. No such restricted
-dataset or third-party material is included in this repository.
